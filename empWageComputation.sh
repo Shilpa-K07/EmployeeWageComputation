@@ -81,7 +81,7 @@ echo $empHrs
 
 echo workinh hours $empHrs
 
-echo storing daily wage and total wage
+echo storing daily wage and total wage and day
 
 totalWOrkingDays=0
 totalWage=0
@@ -96,5 +96,6 @@ randomcheck=$((RANDOM%3))
                 dailyWageArray[$totalWOrkingDays]=$dailywage
                 totalWage=$(($totalWage+$dailywage))
 done
+echo " Day " ${!dailyWageArray[@]}
 echo " DailyWage " ${dailyWageArray[@]}
-cho " Total Wage " $totalWage
+echo " Total Wage " $totalWage
