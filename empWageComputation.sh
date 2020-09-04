@@ -87,10 +87,3 @@ empWagePerHour=20
 totalWorkingDays=20
 
 echo Storing dailywage with totalwage
-
-dailyWage=$(($empHrs*$empWagePerHour))
-totalWage=$(($dailyWage*$totalWorkingDays))
-
-arr=($dailyWage $totalWage)
-echo dailywage and totalwage
-echo ${arr[@]}
