@@ -1,5 +1,6 @@
 #!/bin/bash -x
 echo welcome to Employee Wage Computation Problem !
+
 randomCheck=$((RANDOM%2))
 
 if [ $randomCheck -eq 1 ]
@@ -47,3 +48,14 @@ totalWorkingDays=20
 MonthlyWage=$(($dailyWage*$totalWorkingDays))
 
 echo employee wage for a month $MonthlyWage
+
+echo "Calculating wages for a month using condition of titalworking days of 20 is reached"
+totalWorkingDays=0
+MonthlyWage=0
+while [[ totalWorkingDays -lt 20 ]]
+do
+	MonthlyWage=$(($MonthlyWage+$dailyWage))
+	totalWorkingDays=$(($totalWorkingDays+1))
+done
+
+echo "Monthly wage using condition is: " $MonthlyWage
