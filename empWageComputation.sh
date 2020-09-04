@@ -1,17 +1,13 @@
 #!/bin/bash -x
 echo welcome to Employee Wage Computation Problem !
 
-isFullTime=1
-isPartTime=2
-randomCheck=$((RANDOM%3))
+randomCheck=$((RANDOM%2))
 
-if [ $isFullTime -eq $randomCheck ]
+if [ $randomCheck -eq 1 ]
 then
-        echo "Employee is present and Employee is full time"
+        echo "Employee is present"
 
-elif [ $isPartTime -eq $randomCheck ]
+elif [ $randomCheck -eq 0 ]
 then
-        echo "Employee is present and Employee is part time"
-else
         echo "Employee is absent"
 fi
