@@ -1,7 +1,6 @@
 #!/bin/bash 
 echo welcome to Employee Wage Computation Problem !
 
-
 randomCheck=$((RANDOM%2))
 
 if [ $randomCheck -eq 1 ]
@@ -80,5 +79,18 @@ esac
 echo $empHrs
 }
 
+randomCheck1=$((RANDOM%3))
 empHrs="$(getWorkingHours $randomCheck1)"
- echo work hours is $empHrs
+echo work hours is $empHrs
+
+empWagePerHour=20
+totalWorkingDays=20
+
+echo Storing dailywage with totalwage
+
+dailyWage=$(($empHrs*$empWagePerHour))
+totalWage=$(($dailyWage*$totalWorkingDays))
+
+arr=($dailyWage $totalWage)
+echo dailywage and totalwage
+echo ${arr[@]}
