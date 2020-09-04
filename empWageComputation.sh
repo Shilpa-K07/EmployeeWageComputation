@@ -1,5 +1,5 @@
 #!/bin/bash -x
-echo welcome to Employee Wage Computation Problem !!
+echo welcome to Employee Wage Computation Problem !
 
 randomCheck=$((RANDOM%3))
 
