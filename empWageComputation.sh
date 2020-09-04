@@ -97,4 +97,4 @@ randomcheck=$((RANDOM%3))
                 totalWage=$(($totalWage+$dailywage))
 done
 echo " DailyWage " ${dailyWageArray[@]}
-echo " Total Wage " $totalWage
+cho " Total Wage " $totalWage
